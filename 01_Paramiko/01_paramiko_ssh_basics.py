@@ -9,7 +9,7 @@ if not username:
     username= 'admin'
     print(f"no username provided default {username} is used")
 
-password = getpass("Enter password of the user {username}") or "admin"
+password = getpass(f"Enter password of the user {username}") or "admin"
 
 ssh_client = client.SSHClient()
 ssh_client.set_missing_host_key_policy(client.AutoAddPolicy())
